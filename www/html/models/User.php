@@ -39,7 +39,7 @@ class User
     public function login(string $password, $remember = false): bool
     {
         if ($this->checkPassword($password)) {
-            SiteHelper::setCookie('session_id', $this->username, $remember ? 0 : (time() + self::SESSION_DURATION));
+            SiteHelper::setCookie('session_id', $this->username, $remember ? (time() + self::SESSION_DURATION) : 0);
 
             return true;
         }
