@@ -3,12 +3,11 @@ FROM php:8-fpm
 RUN apt-get update \
     && docker-php-ext-install -j$(nproc) \
     mysqli \
-    pdo_mysql \
-    php-cli
+    pdo_mysql
 
 COPY php.ini /usr/local/etc/php/conf.d/custom-config.ini
 
 WORKDIR /var/www/html
 
+CMD ["php", "/var/www/html/./console.php"]
 CMD ["php-fpm"]
-ENTRYPOINT ["/usr/bin/php","-f","/var/www/html/console.php"]
