@@ -10,4 +10,4 @@ COPY php.ini /usr/local/etc/php/conf.d/custom-config.ini
 WORKDIR /var/www/html
 
 CMD ["php-fpm"]
-CMD ["php /var/www/html/console.php"]
+ENTRYPOINT ["/usr/bin/php","-f","/var/www/html/console.php"]
