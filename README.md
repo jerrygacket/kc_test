@@ -9,4 +9,5 @@ git clone git@github.com:jerrygacket/kc_test.git
 cd kc_test
 sudo make install
 make start
+make migrate
 ```
