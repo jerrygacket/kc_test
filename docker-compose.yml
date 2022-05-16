@@ -1,5 +1,5 @@
 version: "3.5"
-services: 
+services:
     nginx:
         image: nginx:latest
         ports:
@@ -9,10 +9,14 @@ services:
             - ./hosts/:/etc/nginx/conf.d
             - ./www/:/var/www:cached
             - ./logs:/var/log/nginx
+        depends_on:
+            - php
         links:
             - php
     php:
         build: ./images/php
+        depends_on:
+            - mysql
         links:
             - mysql
         volumes:
