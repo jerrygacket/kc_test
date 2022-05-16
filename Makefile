@@ -1,5 +1,4 @@
 install:
-    chmod 777 mysql
-    chmod 777 logs
+	chmod 777 mysql && chmod 777 logs
 start:
-    bash start.sh .
+	bash start.sh .
