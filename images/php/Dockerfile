@@ -9,5 +9,4 @@ COPY php.ini /usr/local/etc/php/conf.d/custom-config.ini
 
 WORKDIR /var/www/html
 
-CMD ["php", "/var/www/html/console.php"]
 CMD ["php-fpm"]
