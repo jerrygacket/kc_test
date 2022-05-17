@@ -11,3 +11,9 @@ sudo make install
 make start
 make migrate
 ```
+
+### Use
+open link in browser: http://localhost
+
+login: admin
+password: admin
