@@ -16,4 +16,5 @@ make migrate
 open link in browser: http://localhost
 
 login: admin
+
 password: admin
