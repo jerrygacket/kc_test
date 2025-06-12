@@ -7,11 +7,11 @@ if [ -n "$1" ]; then
   projName=$(sed 's/\/*$//' <<< "$1")
 else
   ls -d $HOME/DOCKER/*/|sed -e 's/\/*$//'
-  read -p "запустить: " projName
+  read -p "project for start: " projName
 fi
 
 if [ -d "$projName" ]; then
-  echo -e "\033[0;32mЗапускаем ${projName}\033[0m"
+  echo -e "\033[0;32mStarting ${projName}\033[0m"
   cd $projName
-  docker-compose up -d --remove-orphans
+  docker compose up -d --remove-orphans
 fi
