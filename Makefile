@@ -3,4 +3,4 @@ install:
 start:
 	bash start.sh .
 migrate:
-	docker exec -it kc_test_php-1 php console.php
+	docker exec -it kc_test-php-1 php console.php
